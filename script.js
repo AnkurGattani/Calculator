@@ -10,9 +10,11 @@ Array.from(buttons).forEach((button) => {
 		if (innerHTML == '=') {
 			display = eval(display);
 			input.value = display;
+			display = String(display);
 		}
 		else if (isOperator(innerHTML)) {
 			let prev = display.charAt(display.length - 1);
+			console.log(prev);
 			if (!isOperator(prev)) {
 				display = display + innerHTML;
 			}
